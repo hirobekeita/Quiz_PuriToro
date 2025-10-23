@@ -8,11 +8,21 @@ const GameScreen = () => {
 
   const handleAnswer = (answer: 'A' | 'B') => {
     const currentImage = gameState.images[gameState.currentRound];
+    const isCorrect = answer === currentImage.correctAnswer;
+    
     submitAnswer(answer);
     
     if (gameState.currentRound + 1 >= 10) {
       setTimeout(() => {
-        navigate('/result', { state: { answers: [...gameState.answers, { imageId: currentImage.id, answer }] } });
+        navigate('/result', { 
+          state: { 
+            answers: [...gameState.answers, { 
+              imageId: currentImage.id, 
+              answer,
+              isCorrect 
+            }] 
+          } 
+        });
       }, 300);
     }
   };
