@@ -8,7 +8,7 @@
 
 export interface ImageAnswerData {
   imageId: number;
-  correctAnswer: 'A' | 'B';
+  correctAnswer: 'プリン' | '大トロ';
 }
 
 /**
@@ -18,27 +18,20 @@ export interface ImageAnswerData {
  * Image correct answer mapping
  * Defines correct answers for image1.svg through image20.svg
  */
-export const IMAGE_ANSWERS: Record<number, 'A' | 'B'> = {
-  1: 'A',
-  2: 'B',
-  3: 'A',
-  4: 'B',
-  5: 'A',
-  6: 'B',
-  7: 'A',
-  8: 'B',
-  9: 'A',
-  10: 'B',
-  11: 'A',
-  12: 'B',
-  13: 'A',
-  14: 'B',
-  15: 'A',
-  16: 'B',
-  17: 'A',
-  18: 'B',
-  19: 'A',
-  20: 'B',
+export const IMAGE_ANSWERS: Record<number, 'プリン' | '大トロ'> = {
+  1: 'プリン',
+  2: 'プリン',
+  3: 'プリン',
+  4: 'プリン',
+  5: 'プリン',
+  6: 'プリン',
+  7: '大トロ',
+  8: '大トロ',
+  9: '大トロ',
+  10: '大トロ',
+  11: '大トロ',
+  12: '大トロ',
+  13: '大トロ',
 };
 
 /**
@@ -48,6 +41,6 @@ export const IMAGE_ANSWERS: Record<number, 'A' | 'B'> = {
  * @param imageNumber - 画像番号（1〜20）/ Image number (1-20)
  * @returns 正解（A または B）/ Correct answer (A or B)
  */
-export const getCorrectAnswer = (imageNumber: number): 'A' | 'B' => {
-  return IMAGE_ANSWERS[imageNumber] || 'A';
+export const getCorrectAnswer = (imageNumber: number): 'プリン' | '大トロ' => {
+  return IMAGE_ANSWERS[imageNumber] || 'プリン';
 };
