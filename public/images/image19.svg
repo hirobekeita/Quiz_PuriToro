@@ -1,0 +1,5 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" fill="#FFCCBC"/>
+  <circle cx="150" cy="150" r="80" fill="#FFF" opacity="0.5"/>
+  <text x="150" y="160" font-family="Arial" font-size="40" fill="#FF5722" text-anchor="middle">🎨</text>
+</svg>
