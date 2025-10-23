@@ -1,12 +1,12 @@
 export interface QuizImage {
   id: number;
   src: string;
-  correctAnswer: 'A' | 'B'; // 正解（A または B）
+  correctAnswer: 'プリン' | '大トロ'; // 正解（プリン または 大トロ）
 }
 
 export interface QuizAnswer {
   imageId: number;
-  answer: 'A' | 'B';
+  answer: 'プリン' | '大トロ';
   isCorrect: boolean; // 正解かどうか
 }
 

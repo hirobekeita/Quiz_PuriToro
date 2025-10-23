@@ -9,8 +9,8 @@ const ResultScreen = () => {
 
   // 正解数をカウント / Count correct answers
   const correctCount = answers.filter(a => a.isCorrect).length;
-  const countA = answers.filter(a => a.answer === 'A').length;
-  const countB = answers.filter(a => a.answer === 'B').length;
+  const countPurin = answers.filter(a => a.answer === 'プリン').length;
+  const countOtoro = answers.filter(a => a.answer === '大トロ').length;
 
   const handlePlayAgain = () => {
     navigate('/');
@@ -84,23 +84,23 @@ const ResultScreen = () => {
 
         <div className="score-container">
           <div className="score-card">
-            <div className="score-label">選択 A / Option A</div>
-            <div className="score-value">{countA}</div>
+            <div className="score-label">プリン選択 / Pudding</div>
+            <div className="score-value">{countPurin}</div>
             <div className="score-bar">
               <div 
                 className="score-fill score-fill-a" 
-                style={{ width: `${(countA / 10) * 100}%` }}
+                style={{ width: `${(countPurin / 10) * 100}%` }}
               ></div>
             </div>
           </div>
 
           <div className="score-card">
-            <div className="score-label">選択 B / Option B</div>
-            <div className="score-value">{countB}</div>
+            <div className="score-label">大トロ選択 / Fatty Tuna</div>
+            <div className="score-value">{countOtoro}</div>
             <div className="score-bar">
               <div 
                 className="score-fill score-fill-b" 
-                style={{ width: `${(countB / 10) * 100}%` }}
+                style={{ width: `${(countOtoro / 10) * 100}%` }}
               ></div>
             </div>
           </div>
