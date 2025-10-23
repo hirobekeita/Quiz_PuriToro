@@ -24,7 +24,7 @@ export const useGameState = () => {
     initGame();
   }, []);
 
-  const submitAnswer = (answer: 'A' | 'B') => {
+  const submitAnswer = (answer: 'プリン' | '大トロ') => {
     const currentImage = gameState.images[gameState.currentRound];
     const isCorrect = answer === currentImage.correctAnswer;
     

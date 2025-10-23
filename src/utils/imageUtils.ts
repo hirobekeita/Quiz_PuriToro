@@ -1,7 +1,7 @@
 import type { QuizImage } from '../types';
 import { getCorrectAnswer } from '../data/imageAnswers';
 
-const TOTAL_IMAGES = 20;
+const TOTAL_IMAGES = 13;
 const QUIZ_IMAGE_COUNT = 10;
 
 /**
@@ -11,7 +11,7 @@ const QUIZ_IMAGE_COUNT = 10;
 export const getAllImagePaths = (): string[] => {
   const images: string[] = [];
   for (let i = 1; i <= TOTAL_IMAGES; i++) {
-    images.push(`/images/image${i}.svg`);
+    images.push(`/images/image${i}.jpg`);
   }
   return images;
 };
@@ -26,9 +26,9 @@ export const getRandomImages = (): QuizImage[] => {
   const selected = shuffled.slice(0, QUIZ_IMAGE_COUNT);
   
   return selected.map((src, index) => {
-    // 画像ファイル名から番号を抽出（例: "/images/image5.svg" -> 5）
-    // Extract image number from filename (e.g., "/images/image5.svg" -> 5)
-    const match = src.match(/image(\d+)\.svg/);
+    // 画像ファイル名から番号を抽出（例: "/images/image5.jpg" -> 5）
+    // Extract image number from filename (e.g., "/images/image5.jpg" -> 5)
+    const match = src.match(/image(\d+)\.jpg/);
     const imageNumber = match ? parseInt(match[1], 10) : 1;
     
     return {

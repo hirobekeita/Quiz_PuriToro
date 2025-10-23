@@ -6,7 +6,7 @@ const GameScreen = () => {
   const navigate = useNavigate();
   const { gameState, submitAnswer } = useGameState();
 
-  const handleAnswer = (answer: 'A' | 'B') => {
+  const handleAnswer = (answer: 'プリン' | '大トロ') => {
     const currentImage = gameState.images[gameState.currentRound];
     const isCorrect = answer === currentImage.correctAnswer;
     
@@ -81,15 +81,15 @@ const GameScreen = () => {
         <div className="button-container">
           <button 
             className="answer-button button-a" 
-            onClick={() => handleAnswer('A')}
+            onClick={() => handleAnswer('プリン')}
           >
-            A
+            プリン
           </button>
           <button 
             className="answer-button button-b" 
-            onClick={() => handleAnswer('B')}
+            onClick={() => handleAnswer('大トロ')}
           >
-            B
+            大トロ
           </button>
         </div>
       </div>
