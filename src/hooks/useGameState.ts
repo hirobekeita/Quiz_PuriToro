@@ -26,9 +26,12 @@ export const useGameState = () => {
 
   const submitAnswer = (answer: 'A' | 'B') => {
     const currentImage = gameState.images[gameState.currentRound];
+    const isCorrect = answer === currentImage.correctAnswer;
+    
     const newAnswer: QuizAnswer = {
       imageId: currentImage.id,
       answer,
+      isCorrect,
     };
 
     setGameState(prev => ({
