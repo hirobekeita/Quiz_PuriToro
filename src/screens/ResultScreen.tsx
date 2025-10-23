@@ -19,43 +19,37 @@ const ResultScreen = () => {
   /**
    * スコアに基づいて結果メッセージを取得
    * Get result message based on score
+   * 9-10: よくできました (Well done)
+   * 8以下: 頑張りましょう (Let's try harder)
    */
   const getResultMessage = () => {
-    if (correctCount === 10) {
-      return "パーフェクト！全問正解にゃ！🎉 Perfect score, meow!";
-    } else if (correctCount >= 8) {
-      return "すごいにゃ！ほぼ完璧にゃん！😸 Amazing, almost purrfect!";
-    } else if (correctCount >= 6) {
-      return "よくできたにゃ！😺 Well done, meow!";
-    } else if (correctCount >= 4) {
-      return "まあまあにゃん 🐱 Not bad!";
+    if (correctCount >= 9) {
+      return "よくできました！素晴らしいにゃ！😸 Excellent work, meow!";
     } else {
-      return "次は頑張るにゃ！😿 Better luck next time, meow!";
+      return "次は頑張りましょう！😺 Let's try harder next time, meow!";
     }
   };
 
   /**
    * スコアに基づいて結果画像の絵文字を取得
    * Get result emoji based on score
+   * 9-10: よくできました (Well done) - 🌟
+   * 8以下: 頑張りましょう (Try harder) - 💝
    */
   const getResultEmoji = () => {
-    if (correctCount === 10) return "🏆";
-    if (correctCount >= 8) return "🌟";
-    if (correctCount >= 6) return "✨";
-    if (correctCount >= 4) return "🎀";
+    if (correctCount >= 9) return "🌟";
     return "💝";
   };
 
   /**
    * スコアに基づいて猫の画像を取得
    * Get cat image based on score
+   * 9-10: よくできました (Well done) - 😸
+   * 8以下: 頑張りましょう (Try harder) - 😺
    */
   const getCatImage = () => {
-    if (correctCount === 10) return "😻"; // Heart eyes cat
-    if (correctCount >= 8) return "😸"; // Grinning cat
-    if (correctCount >= 6) return "😺"; // Smiling cat
-    if (correctCount >= 4) return "🐱"; // Cat face
-    return "😿"; // Crying cat
+    if (correctCount >= 9) return "😸"; // Grinning cat - Well done
+    return "😺"; // Smiling cat - Try harder
   };
 
   return (
