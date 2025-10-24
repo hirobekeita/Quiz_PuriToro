@@ -9,8 +9,6 @@ const ResultScreen = () => {
 
   // 正解数をカウント / Count correct answers
   const correctCount = answers.filter(a => a.isCorrect).length;
-  const countPurin = answers.filter(a => a.answer === 'プリン').length;
-  const countOtoro = answers.filter(a => a.answer === '大トロ').length;
 
   const handlePlayAgain = () => {
     navigate('/');
@@ -75,30 +73,6 @@ const ResultScreen = () => {
           <div className="correct-label">正解数 / Correct Answers</div>
           <div className="correct-value">{correctCount} / 10</div>
           <div className="paw-icon">🐾</div>
-        </div>
-
-        <div className="score-container">
-          <div className="score-card">
-            <div className="score-label">プリン選択 / Pudding</div>
-            <div className="score-value">{countPurin}</div>
-            <div className="score-bar">
-              <div 
-                className="score-fill score-fill-a" 
-                style={{ width: `${(countPurin / 10) * 100}%` }}
-              ></div>
-            </div>
-          </div>
-
-          <div className="score-card">
-            <div className="score-label">大トロ選択 / Fatty Tuna</div>
-            <div className="score-value">{countOtoro}</div>
-            <div className="score-bar">
-              <div 
-                className="score-fill score-fill-b" 
-                style={{ width: `${(countOtoro / 10) * 100}%` }}
-              ></div>
-            </div>
-          </div>
         </div>
 
         <button className="play-again-button" onClick={handlePlayAgain}>
