@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Background circle with pastel gradient -->
+  <defs>
+    <linearGradient id="highScoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFE5F1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F4FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="catBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD1DC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFB6C1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="200" cy="200" r="180" fill="url(#highScoreGrad)" />
+  
+  <!-- Happy cat character -->
+  <g id="happyCat">
+    <!-- Cat body/head -->
+    <ellipse cx="200" cy="220" rx="100" ry="110" fill="url(#catBodyGrad)" />
+    
+    <!-- Cat ears -->
+    <path d="M 120 160 L 100 100 L 160 140 Z" fill="#FFB6C1" />
+    <path d="M 280 160 L 300 100 L 240 140 Z" fill="#FFB6C1" />
+    <path d="M 125 155 L 115 120 L 155 145 Z" fill="#FFC0CB" />
+    <path d="M 275 155 L 285 120 L 245 145 Z" fill="#FFC0CB" />
+    
+    <!-- Happy closed eyes -->
+    <path d="M 165 200 Q 175 210 185 200" stroke="#8B4789" stroke-width="4" fill="none" stroke-linecap="round" />
+    <path d="M 215 200 Q 225 210 235 200" stroke="#8B4789" stroke-width="4" fill="none" stroke-linecap="round" />
+    
+    <!-- Big smile -->
+    <path d="M 160 240 Q 200 270 240 240" stroke="#8B4789" stroke-width="4" fill="none" stroke-linecap="round" />
+    
+    <!-- Blush marks -->
+    <ellipse cx="140" cy="230" rx="20" ry="15" fill="#FFB6C1" opacity="0.6" />
+    <ellipse cx="260" cy="230" rx="20" ry="15" fill="#FFB6C1" opacity="0.6" />
+    
+    <!-- Whiskers -->
+    <line x1="100" y1="215" x2="60" y2="210" stroke="#8B4789" stroke-width="2" />
+    <line x1="100" y1="225" x2="60" y2="230" stroke="#8B4789" stroke-width="2" />
+    <line x1="300" y1="215" x2="340" y2="210" stroke="#8B4789" stroke-width="2" />
+    <line x1="300" y1="225" x2="340" y2="230" stroke="#8B4789" stroke-width="2" />
+  </g>
+  
+  <!-- Stars decoration -->
+  <text x="80" y="100" font-size="40" fill="#FFD700">⭐</text>
+  <text x="300" y="120" font-size="35" fill="#FFD700">⭐</text>
+  <text x="320" y="280" font-size="30" fill="#FFD700">✨</text>
+  <text x="60" y="300" font-size="30" fill="#FFD700">✨</text>
+</svg>
