@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import type { QuizAnswer } from '../types';
+import BGMControl from './BGMControl';
 import './ResultScreen.css';
 
 const ResultScreen = () => {
@@ -81,6 +82,8 @@ const ResultScreen = () => {
           <span className="button-paw">🐾</span>
         </button>
       </div>
+      
+      <BGMControl />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useGameState } from '../hooks/useGameState';
+import BGMControl from './BGMControl';
 import './GameScreen.css';
 
 const GameScreen = () => {
@@ -93,6 +94,8 @@ const GameScreen = () => {
           </button>
         </div>
       </div>
+      
+      <BGMControl />
     </div>
   );
 };
