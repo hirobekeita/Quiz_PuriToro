@@ -10,8 +10,9 @@ const QUIZ_IMAGE_COUNT = 10;
  */
 export const getAllImagePaths = (): string[] => {
   const images: string[] = [];
+  const baseUrl = import.meta.env.BASE_URL || '/';
   for (let i = 1; i <= TOTAL_IMAGES; i++) {
-    images.push(`/images/image${i}.jpg`);
+    images.push(`${baseUrl}images/image${i}.jpg`);
   }
   return images;
 };
