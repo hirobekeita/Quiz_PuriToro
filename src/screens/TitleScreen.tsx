@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getAllImagePaths } from '../utils/imageUtils';
+import BGMControl from './BGMControl';
 import './TitleScreen.css';
 
 const TitleScreen = () => {
@@ -57,6 +58,8 @@ const TitleScreen = () => {
           <span className="button-paw">🐾</span>
         </button>
       </div>
+      
+      <BGMControl />
     </div>
   );
 };
