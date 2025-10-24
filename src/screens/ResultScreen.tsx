@@ -55,10 +55,6 @@ const ResultScreen = () => {
   return (
     <div className="result-screen">
       <div className="result-content">
-        {/* Cat ears decoration */}
-        <div className="cat-ears">
-          <div className="cat-ear cat-ear-left">◢</div>
-          <div className="cat-ear cat-ear-right">◣</div>
         </div>
 
         <h1 className="result-heading">
