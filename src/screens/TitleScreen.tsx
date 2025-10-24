@@ -14,7 +14,18 @@ const TitleScreen = () => {
     // Select a random image for the title screen
     const images = getAllImagePaths();
     const randomImage = images[Math.floor(Math.random() * images.length)];
-    setBackgroundImage(randomImage);
+    
+    // Preload the background image
+    const img = new Image();
+    img.onload = () => {
+      setBackgroundImage(randomImage);
+    };
+    img.onerror = () => {
+      console.warn('Failed to load background image');
+      // Still set the image path, browser will handle the loading
+      setBackgroundImage(randomImage);
+    };
+    img.src = randomImage;
   }, []);
 
   const handleStart = () => {

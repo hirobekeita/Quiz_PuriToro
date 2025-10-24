@@ -10,8 +10,9 @@ const QUIZ_IMAGE_COUNT = 10;
  */
 export const getAllImagePaths = (): string[] => {
   const images: string[] = [];
+  const baseUrl = import.meta.env.BASE_URL || '/';
   for (let i = 1; i <= TOTAL_IMAGES; i++) {
-    images.push(`/images/image${i}.jpg`);
+    images.push(`${baseUrl}images/image${i}.jpg`);
   }
   return images;
 };
@@ -40,15 +41,19 @@ export const getRandomImages = (): QuizImage[] => {
 };
 
 export const preloadImage = (src: string): Promise<void> => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const img = new Image();
     img.onload = () => resolve();
-    img.onerror = reject;
+    img.onerror = () => {
+      console.warn(`Failed to preload image: ${src}`);
+      // Resolve anyway to not block the loading
+      resolve();
+    };
     img.src = src;
   });
 };
 
 export const preloadImages = async (images: QuizImage[]): Promise<void> => {
   const promises = images.map(image => preloadImage(image.src));
-  await Promise.all(promises);
+  await Promise.allSettled(promises);
 };
