@@ -6,7 +6,7 @@ import './GameScreen.css';
 
 const GameScreen = () => {
   const navigate = useNavigate();
-  const { gameState, submitAnswer } = useGameState();
+  const { gameState, loadingProgress, submitAnswer } = useGameState();
 
   const handleAnswer = (answer: 'プリン' | '大トロ') => {
     // 猫の鳴き声SE再生 / Play cat meow sound effect
@@ -38,6 +38,13 @@ const GameScreen = () => {
         <div className="loading-content">
           <div className="spinner"></div>
           <p>Loading images...</p>
+          <div className="loading-progress-bar">
+            <div 
+              className="loading-progress-fill" 
+              style={{ width: `${loadingProgress}%` }}
+            ></div>
+          </div>
+          <p className="loading-percentage">{loadingProgress}%</p>
         </div>
       </div>
     );
@@ -76,6 +83,11 @@ const GameScreen = () => {
             src={currentImage.src} 
             alt={`Quiz ${gameState.currentRound + 1}`}
             className="quiz-image"
+            onError={(e) => {
+              // Fallback if image fails to load
+              console.error('Failed to load quiz image:', currentImage.src);
+              e.currentTarget.style.display = 'none';
+            }}
           />
         </div>
 

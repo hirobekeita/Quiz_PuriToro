@@ -9,16 +9,48 @@ export const useGameState = () => {
     images: [],
     isLoading: true,
   });
+  const [loadingProgress, setLoadingProgress] = useState(0);
 
   useEffect(() => {
     const initGame = async () => {
       const images = getRandomImages();
-      await preloadImages(images);
-      setGameState(prev => ({
-        ...prev,
-        images,
-        isLoading: false,
-      }));
+      
+      // Start a timeout to show game even if images are slow to load
+      const timeoutId = setTimeout(() => {
+        setGameState(prev => ({
+          ...prev,
+          images,
+          isLoading: false,
+        }));
+        setLoadingProgress(100);
+      }, 8000); // 8 second maximum wait time
+      
+      try {
+        // Simulate progress update
+        const progressInterval = setInterval(() => {
+          setLoadingProgress(prev => Math.min(prev + 10, 90));
+        }, 500);
+        
+        await preloadImages(images);
+        clearInterval(progressInterval);
+        clearTimeout(timeoutId);
+        setLoadingProgress(100);
+        setGameState(prev => ({
+          ...prev,
+          images,
+          isLoading: false,
+        }));
+      } catch (error) {
+        console.error('Error preloading images:', error);
+        clearTimeout(timeoutId);
+        setLoadingProgress(100);
+        // Still show the game even if preload fails
+        setGameState(prev => ({
+          ...prev,
+          images,
+          isLoading: false,
+        }));
+      }
     };
 
     initGame();
@@ -48,15 +80,47 @@ export const useGameState = () => {
       images: [],
       isLoading: true,
     });
+    setLoadingProgress(0);
     
     const initGame = async () => {
       const images = getRandomImages();
-      await preloadImages(images);
-      setGameState(prev => ({
-        ...prev,
-        images,
-        isLoading: false,
-      }));
+      
+      // Start a timeout to show game even if images are slow to load
+      const timeoutId = setTimeout(() => {
+        setGameState(prev => ({
+          ...prev,
+          images,
+          isLoading: false,
+        }));
+        setLoadingProgress(100);
+      }, 8000); // 8 second maximum wait time
+      
+      try {
+        // Simulate progress update
+        const progressInterval = setInterval(() => {
+          setLoadingProgress(prev => Math.min(prev + 10, 90));
+        }, 500);
+        
+        await preloadImages(images);
+        clearInterval(progressInterval);
+        clearTimeout(timeoutId);
+        setLoadingProgress(100);
+        setGameState(prev => ({
+          ...prev,
+          images,
+          isLoading: false,
+        }));
+      } catch (error) {
+        console.error('Error preloading images:', error);
+        clearTimeout(timeoutId);
+        setLoadingProgress(100);
+        // Still show the game even if preload fails
+        setGameState(prev => ({
+          ...prev,
+          images,
+          isLoading: false,
+        }));
+      }
     };
 
     initGame();
@@ -64,6 +128,7 @@ export const useGameState = () => {
 
   return {
     gameState,
+    loadingProgress,
     submitAnswer,
     resetGame,
   };
