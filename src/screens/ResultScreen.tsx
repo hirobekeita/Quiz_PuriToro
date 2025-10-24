@@ -24,9 +24,9 @@ const ResultScreen = () => {
    */
   const getResultMessage = () => {
     if (correctCount >= 9) {
-      return "よくできました！素晴らしいにゃ！😸 Excellent work, meow!";
+      return "にゃいすー👍";
     } else {
-      return "次は頑張りましょう！😺 Let's try harder next time, meow!";
+      return "やりにゃおしー💢";
     }
   };
 
