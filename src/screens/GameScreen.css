@@ -166,13 +166,13 @@
 }
 
 .button-a {
-  background: linear-gradient(135deg, #B0E0E6 0%, #87CEEB 100%);
-  color: #4682B4;
+  background: linear-gradient(135deg, #FFB6C1 0%, #FFD1DC 100%);
+  color: #FF1493;
 }
 
 .button-b {
-  background: linear-gradient(135deg, #FFB6C1 0%, #FFD1DC 100%);
-  color: #FF1493;
+  background: linear-gradient(135deg, #B0E0E6 0%, #87CEEB 100%);
+  color: #FF1493#4682B4;
 }
 
 .answer-button:hover {
