@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Background circle with pastel gradient -->
+  <defs>
+    <linearGradient id="lowScoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0F4FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0E6F8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="catBodyGradLow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B0E0E6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9DC3E6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="200" cy="200" r="180" fill="url(#lowScoreGrad)" />
+  
+  <!-- Encouraging cat character -->
+  <g id="encouragingCat">
+    <!-- Cat body/head -->
+    <ellipse cx="200" cy="220" rx="100" ry="110" fill="url(#catBodyGradLow)" />
+    
+    <!-- Cat ears -->
+    <path d="M 120 160 L 100 100 L 160 140 Z" fill="#9DC3E6" />
+    <path d="M 280 160 L 300 100 L 240 140 Z" fill="#9DC3E6" />
+    <path d="M 125 155 L 115 120 L 155 145 Z" fill="#B0E0E6" />
+    <path d="M 275 155 L 285 120 L 245 145 Z" fill="#B0E0E6" />
+    
+    <!-- Gentle eyes -->
+    <ellipse cx="170" cy="205" rx="8" ry="12" fill="#4682B4" />
+    <ellipse cx="230" cy="205" rx="8" ry="12" fill="#4682B4" />
+    <ellipse cx="172" cy="202" rx="3" ry="4" fill="#FFFFFF" />
+    <ellipse cx="232" cy="202" rx="3" ry="4" fill="#FFFFFF" />
+    
+    <!-- Gentle smile -->
+    <path d="M 170 240 Q 200 255 230 240" stroke="#4682B4" stroke-width="4" fill="none" stroke-linecap="round" />
+    
+    <!-- Blush marks -->
+    <ellipse cx="140" cy="230" rx="20" ry="15" fill="#9DC3E6" opacity="0.6" />
+    <ellipse cx="260" cy="230" rx="20" ry="15" fill="#9DC3E6" opacity="0.6" />
+    
+    <!-- Whiskers -->
+    <line x1="100" y1="215" x2="60" y2="210" stroke="#4682B4" stroke-width="2" />
+    <line x1="100" y1="225" x2="60" y2="230" stroke="#4682B4" stroke-width="2" />
+    <line x1="300" y1="215" x2="340" y2="210" stroke="#4682B4" stroke-width="2" />
+    <line x1="300" y1="225" x2="340" y2="230" stroke="#4682B4" stroke-width="2" />
+  </g>
+  
+  <!-- Heart decorations -->
+  <text x="70" y="110" font-size="35" fill="#DDA0DD">💝</text>
+  <text x="310" y="130" font-size="30" fill="#DDA0DD">💝</text>
+  <text x="320" y="290" font-size="25" fill="#E0BBE4">💗</text>
+  <text x="60" y="310" font-size="25" fill="#E0BBE4">💗</text>
+</svg>
