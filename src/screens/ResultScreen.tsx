@@ -56,8 +56,9 @@ const ResultScreen = () => {
    * 8以下: 頑張りましょう (Try harder) - low-score.jpg
    */
   const getCatImage = () => {
-    if (correctCount >= 9) return "/images/results/high-score.jpg";
-    return "/images/results/low-score.jpg";
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    if (correctCount >= 9) return `${baseUrl}images/results/high-score.jpg`;
+    return `${baseUrl}images/results/low-score.jpg`;
   };
 
   return (
