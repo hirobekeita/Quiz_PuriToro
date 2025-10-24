@@ -15,31 +15,6 @@
   position: relative;
 }
 
-/* Cat ears decoration */
-.cat-ears {
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 150px;
-  font-size: 3rem;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
-}
-
-.cat-ear {
-  color: #FFB6C1;
-  animation: wiggle 2s ease-in-out infinite;
-}
-
-.cat-ear-left {
-  animation-delay: 0s;
-}
-
-.cat-ear-right {
-  animation-delay: 0.5s;
-}
-
 @keyframes wiggle {
   0%, 100% {
     transform: rotate(0deg);
