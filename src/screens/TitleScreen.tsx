@@ -51,7 +51,8 @@ const TitleScreen = () => {
         </div>
 
         <h1 className="title-heading">
-          🐾 クイズ！ぷりとろ！ 🐾
+          🐾 クイズ 🐾<br />
+          🐾 ぷりとろ 🐾
         </h1>
         <h2 className="title-heading-en">
           Quiz PuriToro
