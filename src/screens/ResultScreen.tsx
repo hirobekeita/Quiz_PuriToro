@@ -103,7 +103,7 @@ const ResultScreen = () => {
 
         <button className="play-again-button" onClick={handlePlayAgain}>
           <span className="button-paw">🐾</span>
-          もう一度プレイ / Play Again
+          もう一度プレイ
           <span className="button-paw">🐾</span>
         </button>
       </div>
