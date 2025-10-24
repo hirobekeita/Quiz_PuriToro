@@ -44,12 +44,12 @@ const ResultScreen = () => {
   /**
    * スコアに基づいて猫の画像を取得
    * Get cat image based on score
-   * 9-10: よくできました (Well done) - high-score.svg
-   * 8以下: 頑張りましょう (Try harder) - low-score.svg
+   * 9-10: よくできました (Well done) - high-score.jpg
+   * 8以下: 頑張りましょう (Try harder) - low-score.jpg
    */
   const getCatImage = () => {
-    if (correctCount >= 9) return "/images/results/high-score.svg";
-    return "/images/results/low-score.svg";
+    if (correctCount >= 9) return "/images/results/high-score.jpg";
+    return "/images/results/low-score.jpg";
   };
 
   return (
