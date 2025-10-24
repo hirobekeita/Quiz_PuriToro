@@ -36,14 +36,14 @@ const TitleScreen = () => {
         </div>
 
         <h1 className="title-heading">
-          🐾 クイズにゃんトロ 🐾
+          🐾 クイズ！ぷりとろ！ 🐾
         </h1>
         <h2 className="title-heading-en">
           Quiz PuriToro
         </h2>
         <p className="title-subtitle">
-          10問の画像クイズににゃん！<br />
-          Choose your favorite for 10 rounds, meow!
+          10問の画像が提示されます。<br />
+          それがプリンか大トロか選んでください。にゃん。
         </p>
         
         {/* Cat mascot */}
@@ -53,7 +53,7 @@ const TitleScreen = () => {
 
         <button className="start-button" onClick={handleStart}>
           <span className="button-paw">🐾</span>
-          スタート / Start Quiz
+          スタート
           <span className="button-paw">🐾</span>
         </button>
       </div>
