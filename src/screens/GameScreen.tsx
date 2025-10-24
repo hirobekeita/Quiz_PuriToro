@@ -75,7 +75,7 @@ const GameScreen = () => {
         </div>
 
         <div className="question-text">
-          Which do you prefer?
+          どっちでしょう?
         </div>
 
         <div className="button-container">
