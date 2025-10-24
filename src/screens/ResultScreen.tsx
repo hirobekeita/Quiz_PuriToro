@@ -32,11 +32,11 @@ const ResultScreen = () => {
    * スコアに基づいて結果画像の絵文字を取得
    * Get result emoji based on score
    * 9-10: よくできました (Well done) - 🌟
-   * 8以下: 頑張りましょう (Try harder) - 💝
+   * 8以下: 頑張りましょう (Try harder) - 🌟�
    */
   const getResultEmoji = () => {
     if (correctCount >= 9) return "🌟";
-    return "💝";
+    return "🌟";
   };
 
   /**
@@ -70,7 +70,7 @@ const ResultScreen = () => {
         {/* Correct answers display */}
         <div className="correct-score-display">
           <div className="paw-icon">🐾</div>
-          <div className="correct-label">正解数 / Correct Answers</div>
+          <div className="correct-label">正解数</div>
           <div className="correct-value">{correctCount} / 10</div>
           <div className="paw-icon">🐾</div>
         </div>
