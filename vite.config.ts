@@ -4,5 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/Quiz_PuriToro/'
+  base: '/Quiz_PuriToro/',
+  build: {
+    outDir: 'dist',
+  },
 })
