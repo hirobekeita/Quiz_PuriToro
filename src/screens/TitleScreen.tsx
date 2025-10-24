@@ -48,7 +48,7 @@ const TitleScreen = () => {
         
         {/* Cat mascot */}
         <div className="title-cat-mascot">
-          <span className="title-cat-face">😺</span>
+          <span className="title-cat-face">🍮🍣</span>
         </div>
 
         <button className="start-button" onClick={handleStart}>
