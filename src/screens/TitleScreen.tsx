@@ -43,7 +43,7 @@ const TitleScreen = () => {
         </h2>
         <p className="title-subtitle">
           10問の画像が提示されます。<br />
-          それがプリンか大トロか選んでください。にゃん。
+          それがプリンか大トロか当ててください。にゃん。
         </p>
         
         {/* Cat mascot */}
