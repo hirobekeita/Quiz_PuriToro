@@ -7,7 +7,7 @@ import ResultScreen from './screens/ResultScreen';
 function App() {
   return (
     <BGMProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/Quiz_PuriToro/">
         <Routes>
           <Route path="/" element={<TitleScreen />} />
           <Route path="/game" element={<GameScreen />} />
