@@ -55,7 +55,6 @@ const ResultScreen = () => {
   return (
     <div className="result-screen">
       <div className="result-content">
-        </div>
 
         <h1 className="result-heading">
           結果発表 {getResultEmoji()}
