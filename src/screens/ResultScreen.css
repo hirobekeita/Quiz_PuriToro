@@ -41,9 +41,11 @@
   animation: float 3s ease-in-out infinite;
 }
 
-.cat-face {
-  font-size: 4rem;
-  display: inline-block;
+.cat-image {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
 }
 
 @keyframes float {

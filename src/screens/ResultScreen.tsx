@@ -44,12 +44,12 @@ const ResultScreen = () => {
   /**
    * スコアに基づいて猫の画像を取得
    * Get cat image based on score
-   * 9-10: よくできました (Well done) - 😸
-   * 8以下: 頑張りましょう (Try harder) - 😺
+   * 9-10: よくできました (Well done) - high-score.svg
+   * 8以下: 頑張りましょう (Try harder) - low-score.svg
    */
   const getCatImage = () => {
-    if (correctCount >= 9) return "😸"; // Grinning cat - Well done
-    return "😺"; // Smiling cat - Try harder
+    if (correctCount >= 9) return "/images/results/high-score.svg";
+    return "/images/results/low-score.svg";
   };
 
   return (
@@ -62,7 +62,7 @@ const ResultScreen = () => {
         
         {/* Cat mascot with conditional image */}
         <div className="result-cat-mascot">
-          <span className="cat-face">{getCatImage()}</span>
+          <img src={getCatImage()} alt="Result cat" className="cat-image" />
         </div>
 
         <div className="result-message">
