@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getAllImagePaths } from '../utils/imageUtils';
 import BGMControl from './BGMControl';
+import { soundEffectPlayer } from '../utils/soundEffects';
 import './TitleScreen.css';
 
 const TitleScreen = () => {
@@ -17,6 +18,8 @@ const TitleScreen = () => {
   }, []);
 
   const handleStart = () => {
+    // 猫の鳴き声SE再生 / Play cat meow sound effect
+    soundEffectPlayer.playButtonClick();
     navigate('/game');
   };
 

@@ -1,6 +1,8 @@
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import type { QuizAnswer } from '../types';
 import BGMControl from './BGMControl';
+import { soundEffectPlayer } from '../utils/soundEffects';
 import './ResultScreen.css';
 
 const ResultScreen = () => {
@@ -11,7 +13,14 @@ const ResultScreen = () => {
   // 正解数をカウント / Count correct answers
   const correctCount = answers.filter(a => a.isCorrect).length;
 
+  // 結果画面表示時に猫の鳴き声SE再生 / Play cat meow sound effect when result screen is displayed
+  useEffect(() => {
+    soundEffectPlayer.playResultAnnouncement();
+  }, []);
+
   const handlePlayAgain = () => {
+    // 猫の鳴き声SE再生 / Play cat meow sound effect
+    soundEffectPlayer.playButtonClick();
     navigate('/');
   };
 

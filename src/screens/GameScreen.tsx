@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useGameState } from '../hooks/useGameState';
 import BGMControl from './BGMControl';
+import { soundEffectPlayer } from '../utils/soundEffects';
 import './GameScreen.css';
 
 const GameScreen = () => {
@@ -8,6 +9,9 @@ const GameScreen = () => {
   const { gameState, submitAnswer } = useGameState();
 
   const handleAnswer = (answer: 'プリン' | '大トロ') => {
+    // 猫の鳴き声SE再生 / Play cat meow sound effect
+    soundEffectPlayer.playButtonClick();
+    
     const currentImage = gameState.images[gameState.currentRound];
     const isCorrect = answer === currentImage.correctAnswer;
     
